@@ -1,7 +1,6 @@
-import { Request, Response } from "express";
+import express, { Request, Response } from 'express';
 
-const express = require('express');
-const dotenv = require('dotenv');
+import dotenv from 'dotenv';
 
 dotenv.config();
 
@@ -13,5 +12,6 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 app.listen(port, () => {
+  // eslint-disable-next-line no-console
   console.log(`[server]: Server is running at http://localhost:${port}`);
 });

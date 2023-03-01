@@ -1,0 +1,65 @@
+{
+    "extends": [
+        "airbnb-base",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:jsdoc/recommended"
+    ],
+    "env": {
+        "es2020": true,
+        "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "jsdoc"
+    ],
+    "rules": {
+        "max-len": [
+            "error",
+            {
+                "code" : 79,
+                "ignoreTrailingComments": false
+            }
+        ],
+        "jsdoc/check-indentation": 2,
+        "jsdoc/check-line-alignment": 2,
+        "jsdoc/check-syntax": 2,
+        "jsdoc/match-description": 2,
+        "jsdoc/no-bad-blocks": 2,
+        "jsdoc/no-defaults": 2,
+        "jsdoc/no-restricted-syntax": [
+            "error",
+            {
+                "contexts":[
+                {
+                    "comment":"JsdocBlock[descriptionStartLine=0][descriptionEndLine=0]",
+                    "context":"any",
+                    "message":"Requiring descriptive text on 0th line only"
+                }
+                ]
+            }
+        ],
+        "jsdoc/no-types": 2,
+        "jsdoc/require-asterisk-prefix": 2,
+        "jsdoc/require-description": [
+            "error",
+            {
+                "checkConstructors": true,
+                "exemptedBy": ["type"]
+            }
+        ],
+        "jsdoc/require-description-complete-sentence": 2,
+        "jsdoc/require-example": [
+            "error",
+            {
+                "checkConstructors": true,
+                "exemptedBy": ["type"]
+            }
+        ],
+        "jsdoc/require-hyphen-before-param-description": 2,
+        "jsdoc/require-throws": 2
+    }
+}
